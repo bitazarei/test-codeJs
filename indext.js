@@ -2,5 +2,11 @@ console.log('Hello world');
 console.log('bita');
 var firstName = 'zahra';
 console.log(firstName);
-var njkj = 'nnjsd';
-console.log(njkj);
+var age = 13;
+var fullage = true;
+console.log(fullage);
+var job;
+/*
+va name = 'bot';
+*/ 
+// consol.log(name);
