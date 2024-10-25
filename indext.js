@@ -37,3 +37,6 @@ firstName = 'majid';
 age = 'twenty one';
 job = 'driver';
 alert('first name is : ' + firstName + ' AND last name is : ' + lastName +  ' , ' + age + ' years old , ' + job +' .she is married? ' + married);
+
+var universityMajor = prompt ('What is her university major?');
+console.log('first name is : ' + firstName + ' AND last name is : ' + lastName +  ' , ' + age + ' years old , ' + job +' .she is married? ' + married + ' What is her university major? ' + universityMajor + '');
