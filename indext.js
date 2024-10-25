@@ -50,10 +50,19 @@ ageBita = 33 ;
 Aagee = age - ageBita;
 console.log(Aagee);
 
-// console.log(Year + 2);
-// console.log(bitaYear * 3);
-// console.log(bitaYear / 3);
+/*
+console.log(Year + 2);
+console.log(bitaYear * 3);
+console.log(bitaYear / 3);
 
-// var bitayear = Year - 21;
-// var zahraYear = Year - 16;
-//console.log(bitayear + ' ' + zahraYear);
+var bitayear = Year - 21;
+var zahraYear = Year - 16;
+console.log(bitayear + ' ' + zahraYear);
+*/
+
+//logic operators 
+
+var ageolder = age > ageBita;
+console.log(ageolder);
+console.log(typeof ageBita);
+console.log(typeof ageolder);
