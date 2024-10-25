@@ -66,3 +66,12 @@ var ageolder = age > ageBita;
 console.log(ageolder);
 console.log(typeof ageBita);
 console.log(typeof ageolder);
+ 
+var ageB , ageA ;
+ageB = 21;
+ageA = 23;
+var average = ageB + ageA / 2;
+console.log(average);
+ 
+ageB += 10;
+console.log(ageB);
