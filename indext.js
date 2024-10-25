@@ -31,3 +31,9 @@ job = 'student';
 married = false;
 
 console.log('first name is : ' + firstName + ' AND last name is : ' + lastName +  ' , ' + age + ' years old , ' + job +' .she is married? ' + married);
+
+var firstName , age , job ;
+firstName = 'majid';
+age = 'twenty one';
+job = 'driver';
+alert('first name is : ' + firstName + ' AND last name is : ' + lastName +  ' , ' + age + ' years old , ' + job +' .she is married? ' + married);
