@@ -14,3 +14,9 @@ console.log(BMIJohn);
 
 var BIMolder = BMIJohn > BMIMark;
 console.log(BIMolder);
+
+if (BIMolder = 'BMIJohn'){
+    console.log('john sooooooo older');
+} else {
+    console.log('nooo not isn\'t');
+} 
