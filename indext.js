@@ -12,11 +12,19 @@ console.log(BMIMark);
 var BMIJohn = massJ / (heightJ ** 2);
 console.log(BMIJohn);
 
-var BIMolder = BMIJohn > BMIMark;
-console.log(BIMolder);
+// var BIMolder = BMIJohn > BMIMark;
+// console.log(BIMolder);
 
-if (BIMolder = 'BMIJohn'){
-    console.log('john sooooooo older');
-} else {
-    console.log('nooo not isn\'t');
-} 
+if (BMIJohn > BMIMark){
+    console.log('john older');
+}else {
+    console.log('mark olderrrr');
+}
+
+// var BIMolderr = BMIMark;
+
+// if (BIMolderr = 'BMIMark'){
+//     console.log('john sooooooo older');
+// } else {
+//     console.log('nooo not isn\'t');
+// }
