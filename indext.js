@@ -11,20 +11,17 @@ console.log(BMIMark);
 
 var BMIJohn = massJ / (heightJ ** 2);
 console.log(BMIJohn);
-
-// var BIMolder = BMIJohn > BMIMark;
-// console.log(BIMolder);
-
 if (BMIJohn > BMIMark){
-    console.log('john older');
+    console.log('john higher');
 }else {
-    console.log('mark olderrrr');
+    console.log('mark higher');
 }
 
-// var BIMolderr = BMIMark;
+var fullname = 'Bita zarei';
+var civilStatus = 'single';
 
-// if (BIMolderr = 'BMIMark'){
-//     console.log('john sooooooo older');
-// } else {
-//     console.log('nooo not isn\'t');
-// }
+if (civilStatus === 'married'){
+    console.log(fullname + ' is married ');
+}else{
+    console.log(fullname + ' is so single');
+}
