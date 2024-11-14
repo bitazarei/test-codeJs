@@ -32,7 +32,8 @@ var itIsRaining = false;
 var itIsCloudy = true;
 var itIsCold = true;
 if (itIsRaining === true && itIsCloudy === false){
-    console.log('it is not cold');}
+    console.log('it is not cold');
+}
 else if(itIsRaining === true && itIsCloudy === true){
     console.log('it is cold');
 }
@@ -48,6 +49,22 @@ if (itIsCold === false || itIsCloudy === true){
     console.log('it is sunny :)');
 }
 
-//ternary operator
+// Ternary operator
+
 itIsRaining === true ? console.log(itIsCloudy + ' ' + itIsCold)
 : console.log(! itIsCloudy + ' ' + ! itIsCold);
+
+// Switch Statements
+
+switch(itIsRaining , itIsCloudy , itIsCold){
+    case itIsRaining === true && itIsCloudy === false :
+        console.log('it is XD not cold');
+    break;
+    case itIsRaining === true && itIsCloudy === true :
+        console.log('it is cold'); 
+    break;
+    case itIsRaining === false && itIsCloudy === true :
+        console.log('it is sunny');         
+    default:
+        console.log('the weather is just like that , you know...');
+}
