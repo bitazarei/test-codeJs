@@ -25,3 +25,21 @@ if (civilStatus === 'married'){
 }else{
     console.log(fullname + ' is so single');
 }
+
+var itIsRaining = false;
+var itIsCloudy = false;
+var itIsCold = true;
+if (itIsRaining === true && itIsCloudy === false){
+    console.log('it is not cold');}
+ else if(itIsRaining === true && itIsCloudy === true){
+     console.log('it is cold');
+}
+else{
+    console.log('it is sunny');
+}
+
+if (itIsCold === true || itIsCloudy === true){
+    console.log('it is raining');
+}else{
+    console.log('it is sunny ');
+}
