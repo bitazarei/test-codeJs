@@ -47,3 +47,7 @@ if (itIsCold === false || itIsCloudy === true){
 }else{
     console.log('it is sunny :)');
 }
+
+//ternary operator
+itIsRaining === true ? console.log(itIsCloudy + ' ' + itIsCold)
+: console.log(! itIsCloudy + ' ' + ! itIsCold);
