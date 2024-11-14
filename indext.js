@@ -1,3 +1,5 @@
+// Challenge
+
 var massM , heightM , massJ , heightJ ;
 
 massM = 85;
@@ -16,7 +18,7 @@ if (BMIJohn > BMIMark){
 }else {
     console.log('mark higher');
 }
-
+// if/else statements
 var fullname = 'Bita zarei';
 var civilStatus = 'single';
 
@@ -25,21 +27,23 @@ if (civilStatus === 'married'){
 }else{
     console.log(fullname + ' is so single');
 }
-
+// Boolean logic
 var itIsRaining = false;
-var itIsCloudy = false;
+var itIsCloudy = true;
 var itIsCold = true;
 if (itIsRaining === true && itIsCloudy === false){
     console.log('it is not cold');}
- else if(itIsRaining === true && itIsCloudy === true){
-     console.log('it is cold');
+else if(itIsRaining === true && itIsCloudy === true){
+    console.log('it is cold');
 }
 else{
     console.log('it is sunny');
 }
+console.log( 'it is cloudy ? ' + ! itIsCloudy + '  ,  it is cold ? ' + ! itIsCold);
 
-if (itIsCold === true || itIsCloudy === true){
-    console.log('it is raining');
+if (itIsCold === false || itIsCloudy === true){
+    console.log(! true);
+    //console.log( ' it is cloudy ? ' + ! itIsCloudy + ' it is cold ? ' +  ' ' + ! itIsCold);
 }else{
-    console.log('it is sunny ');
+    console.log('it is sunny :)');
 }
