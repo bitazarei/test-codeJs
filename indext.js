@@ -68,3 +68,12 @@ switch(itIsRaining , itIsCloudy , itIsCold){
     default:
         console.log('the weather is just like that , you know...');
 }
+
+// Truthy and falsy values
+
+var BG = '';
+if (BG || BG === 0) {
+    console.log('that is truthy values');
+} else {
+    console.log('that is falsy values');
+} 
