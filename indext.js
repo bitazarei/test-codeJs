@@ -72,7 +72,7 @@ switch(itIsRaining , itIsCloudy , itIsCold){
 // Truthy and falsy values
 
 var BG = '';
-if (BG || BG === 0) {
+if (BG) {
     console.log('that is truthy values');
 } else {
     console.log('that is falsy values');
