@@ -6,7 +6,7 @@ var Sara = ['Green',28,'hiar cut'];
 console.log(Sara);
 console.log(Sara[2]);
 console.log(Sara.length);
-
+/* 
 // mutate array data
 Sara[0] = 'Smith';
     //Sara[5] = 'single';
@@ -25,7 +25,7 @@ console.log(shebb);
 // array in a different way
 var ExBoyfreands = new Array(ben , jack);
 
-
+*/
 //challenge 3
 
 // less $50 ==> 20% bill
@@ -88,9 +88,9 @@ function expenses(monny){
 };
 
 var dulers = [22, 45 , 78];
-var cal = [ expenses(dulers[0]), //+ dulers[0],
-            expenses(dulers[1]),//+ dulers[1],
-            expenses(dulers[2]), //+ dulers[2]
+var cal = [ expenses(dulers[0]) + dulers[0],
+            expenses(dulers[1]) + dulers[1],
+            expenses(dulers[2])+ dulers[2]
 
 ];
 console.log(cal);
