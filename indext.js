@@ -1,31 +1,26 @@
-// Functions
-/*
-function calculateAge(year , firstName){
-    var age = 2025 - year;
-    console.log(age);
-    var retired = 65 - age;
-    console.log(firstName + ' will retire in ' + retired + ' years')
-}
-calculateAge(2006 , 'Mall');
-*/ 
-// Functions statement and expressions
+// Array
+// initialize new array
+var Sara = ['Green',28,'hiar cut'];
 
-var age = function(yearbirth , name){
-    switch(yearbirth) {
-        case '19':
-        return name + ' years old';
-        
-        case '23':
-        return name + ' years old';
 
-        case '32':
-        return name + ' years old';
+console.log(Sara);
+console.log(Sara[2]);
+console.log(Sara.length);
 
-        case '91':
-        return name + ' years old';
-            
-    }
-}
+// mutate array data
+Sara[0] = 'Smith';
+    //Sara[5] = 'single';
+Sara[Sara.length] ='single';
+Sara.push('blue');
+Sara.unshift('berger');
+Sara.shift();
+Sara.pop();
 
-console.log(age('19','Sara' ));
-console.log(age('23','Zara' ));
+console.log(Sara);
+console.log(Sara.indexOf(28));
+console.log(Sara.indexOf('nh'));
+
+var shebb = Sara.indexOf(45) === -1 ? '45 years olld' : 'not';
+console.log(shebb);
+// array in a different way
+var ExBoyfreands = new Array(ben , jack);
