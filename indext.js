@@ -1,96 +1,101 @@
-// Array
-// initialize new array
+/*const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = fruits;
 
-var Sara = ['Green',28,'hiar cut'];
+function myFunction() {
+  fruits[fruits.length] = "Lemon";
+  document.getElementById("demo").innerHTML = fruits;
+};*/
 
-console.log(Sara);
-console.log(Sara[2]);
-console.log(Sara.length);
-/* 
-// mutate array data
-Sara[0] = 'Smith';
-    //Sara[5] = 'single';
-Sara[Sara.length] ='single';
-Sara.push('blue');
-Sara.unshift('berger');
-Sara.shift();
-Sara.pop();
-
-console.log(Sara);
-console.log(Sara.indexOf(28));
-console.log(Sara.indexOf('nh'));
-
-var shebb = Sara.indexOf(45) === -1 ? '45 years olld' : 'not';
-console.log(shebb);
-// array in a different way
-var ExBoyfreands = new Array(ben , jack);
-
-*/
-//challenge 3
-
-// less $50 ==> 20% bill
-// between $50 and $200 ==> 15%
-// more  $200 ==> 10%
-
-var calculator = [124 , 48 , 268];
-var amount = [0.15, 0.2 , 0.1];
-console.log(calculator);
-
-console.log('bill : '+ (calculator[0]+ calculator[0]*amount[0]));
-console.log('bill : '+ (calculator[1]+ calculator[1]*amount[1]));
-console.log('bill : '+ (calculator[2]+ calculator[2]*amount[2]));
-
-//console.log('bill : '+ (calculator[0]+ calculator[0]*0.15));
-//console.log('bill : '+ (calculator[1]*0.2 + calculator[1]));
-//console.log('bill : '+ (calculator[2]*0.1 + calculator[2]));
-
-
-
-function cal(bill) {
-    var percent;
-    if(bill<50){
-        percent = 0.2;
-    }else if (bill >= 50 && bill < 200){
-        percent = 0.15;
+//practice 1
+function ageCheck(x) {
+    if (x < 18){ 
+        console.log("You can't vote.");
     }else{
-        percent = 0.1;
+        console.log("You can vote.");
     }
-    return percent * bill ;
 }
-var bills = [124 , 48 , 268];
-var resultt = [ cal(bills[0]) + bills[0],
-                cal(bills[1]) + bills[1],
-                cal(bills[2]) + bills[2],
-            
-];
-console.log(resultt);
+ageCheck(19);
 
+//practice 2
+var nums = [45 , 62 ,79 , 85 , 98];
 
-// exercise
-
-function expenses(monny){
-    var tax;
-
-    var tip;
-
-    if(monny < 30){
-        tax = 0.05;
-        tip = 0.1;
-    }else if (30 <= monny && monny < 60 ){
-        tax = 0.08;
-        tip = 0.12;
+function score(num) {
+    let mark;
+    if(num < 60){
+        mark = 'F';
+       
+    }else if ( 60 <= num  && num < 70) {
+        mark = 'D';
+        
+    }else if (70 <= num && num < 80) {
+        mark = 'C';
+        
+    }else if (80 <= num && num < 90) {
+        mark = 'B';
+        
     }else{
-        tax = 0.1;
-        tip = 0.15;
-    }
-    return tip * monny + tax * monny;
-    
+        mark = 'A';
+    }; 
+    return mark;
+};
+var res = [ score(nums[0]),
+            score(nums[1]),
+            score(nums[2]),
+            score(nums[3]),
+            score(nums[4]),
+
+];
+console.log(res);
+
+//practice 3
+var y = [123 ,55] ;
+function password(d) {
+    let x;
+    if (d === 123) {
+         x = true;
+        console.log("Password is correct");
+    }else{
+        x = false;
+        console.log("Password is not correct");
+    }return x;
+};
+var oup =[password(y[0]),
+          password(y[1])
+        ];
+console.log(y[0] + " = "+ oup + " = " + y[1]);
+
+
+
+
+const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits[fruits.length] = "Lemon";
+  document.getElementById("demo").innerHTML = fruits;
 };
 
-var dulers = [22, 45 , 78];
-var cal = [ expenses(dulers[0]) + dulers[0],
-            expenses(dulers[1]) + dulers[1],
-            expenses(dulers[2])+ dulers[2]
+// practice 4
 
+const temp = [-1];
+document.getElementById("demo").innerHTML = temp;
+
+function temperature(x) {
+    if(x < 0){
+        document.getElementById("demo").innerHTML = temp;
+        temp[temp.length]="Wear a heavy coat."
+        console.log('Wear a heavy coat.');
+    }else if(0 <= x && x < 15){
+        document.getElementById("demo").innerHTML = temp;
+        console.log('Wear a light jacket.');
+    }else{
+        document.getElementById("demo").innerHTML = temp;
+        console.log('A t-shirt is fine.');
+    }; return x
+};
+var call = [ temperature(temp[0]),
+             //temperature(temp[1])
 ];
-console.log(cal);
+console.log(call);
+
+//Continued...
