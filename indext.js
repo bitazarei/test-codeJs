@@ -1,10 +1,17 @@
+// Object properties
 var myObject = {
     firstName : 'Jane',
     lastName : 'Green',
     age : 28,
     job : 'manager',
+    fullName : function(){
+       return this.firstName+ ' ' +this.lastName;
+    },
     favoriteFruits : ['banana','apple','avocado']
+    
 }
+//alert(myObject.firstName + ' is ' + myObject.age)
+console.log(myObject.fullName());
 myObject.lastName = 'smith';
 myObject['job'] = 'driver';
 console.log(myObject);
