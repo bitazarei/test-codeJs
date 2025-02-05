@@ -93,9 +93,40 @@ var call = [ temperature(temp[0]),
 ];
 console.log(call);
 
+// challeng _ lecture 23
 
+// hight john = 1.72 & weight john = 80
+// hight mark = 1.52 & weight mark = 65
 
+var BMI = {
+    hightJohn : 1.42 ,
+    weightJohn : 45,
+    hightMark : 1.52,
+    weightMark : 65,
 
+    BIMJohn: function() {
+        return this.weightJohn / (this.hightJohn * this.hightJohn);
 
+       },
 
+    BIMMark: function() {
+        return this.weightMark / (this.hightMark * this.hightMark);
+
+       }
+
+}
+console.log(BMI.BIMJohn() , BMI.BIMMark());
+
+if (BMI.BIMJohn() > BMI.BIMMark()) {
+
+    console.log('John BMI more Mark BMI' + ' John BMI = ' + BMI.BIMJohn());
+
+}else if (BMI.BIMMark() > BMI.BIMJohn()){
+
+    console.log('Mark BMI more John BMI, ' + ' Mark BMI = ' + BMI.BIMMark());
+}else{
+
+    console.log('each equal,  BMI = ' + BMI.BIMJohn());
+}
+    
 
