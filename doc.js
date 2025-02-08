@@ -134,3 +134,71 @@ if (BMI.BIMJohn() > BMI.BIMMark()) {
 }
     
 */
+
+// Challenge _ Lecture 26
+
+// $124 , $48 , $268 , $180 , $42
+// 20% < $50 , $50 < 15% < $200 , $200 < 10%
+
+var tip = {
+    tip1 : .2,
+    tip2 : .15,
+    tip3 : .1 
+};
+var pay =[124, 24 , 268, 180, 42] ;
+var sum = 0;
+
+for(let i in pay){
+    var x = [];
+    if (pay[i] < 50) {
+        x = (tip.tip1 * pay[i] ) + pay[i];
+    }else if( 50 <= pay[i] && pay[i] < 200){
+        x = (tip.tip2 * pay[i] ) + pay[i];
+    }else{
+        x = (tip.tip3 * pay[i] ) + pay[i];
+    }
+    sum += x;
+    console.log("John's : A bill $" + pay[i]+ " with tip is equal to: " + x);
+  
+}
+let avgJ = sum / pay.length;
+
+console.log("Sum:", sum); 
+console.log("Average cost one night for John", avgJ);
+
+
+
+// $77, $375, $110, $45
+// 20% <100 , 100$ < 10% < $300 , $300 < 25%
+
+var tipM = {
+    tip1 : .2,
+    tip2 : .1,
+    tip3 : .25
+};
+var payM = [77,375,110,45]
+let sumM = 0;
+ for(let i in payM){
+    var x;
+    if (payM[i] < 100) {
+        x = (tipM.tip1 * payM[i]) + payM[i];
+
+    }else if (100 <= payM[i] && payM[i] < 300 ){
+        x = (tipM.tip2 * payM[i]) + payM[i];
+
+    }else{
+        x = (tipM.tip3 * payM[i]) + payM[i];
+    }
+    sumM += x;
+    console.log("Mark's : A bill $" + payM[i]+ " with tip is equal to: " + x);
+ 
+}
+    console.log("Sum: " , sumM);
+let avgM = sumM / payM.length;
+console.log("Average cost one night for Mike " , avgM);
+
+if(avgM > avgJ){
+    console.log("Mike spent more.");
+}else{
+    console.log("John spent more.");
+}

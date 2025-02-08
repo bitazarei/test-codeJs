@@ -23,6 +23,18 @@ for (var i = 0; i < person.length; i++) {
         
         console.log(person[i]);
 }
-for(var i = person.length -1; i >= 0; i--){
-    console.log(person[i]);
-   }
+// for(var i = person.length -1; i >= 0; i--){
+//     console.log(person[i]);
+//    }
+
+var fruits = {
+    fruit1 : 'banana',
+    fruit2 : 'apple',
+    fruit3 : 'orange'
+}
+var txt = '';
+for(let i in fruits){
+    
+   txt += console.log(fruits[i]);
+};
+
