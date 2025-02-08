@@ -9,6 +9,8 @@ function myFunction() {
 };*/
 
 //practice 1
+
+/*
 function ageCheck(x) {
     if (x < 18){ 
         console.log("You can't vote.");
@@ -48,6 +50,7 @@ var res = [ score(nums[0]),
 
 ];
 console.log(res);
+*/
 
 //practice 3
 
@@ -71,7 +74,7 @@ console.log(y[0] + " = "+ oup + " = " + y[1]);
 
 
 // practice 4
-
+/*
 const temp = [-1];
 document.getElementById("demo").innerHTML = temp;
 
@@ -97,7 +100,8 @@ console.log(call);
 
 // hight john = 1.72 & weight john = 80
 // hight mark = 1.52 & weight mark = 65
-
+*/
+/*
 var BMI = {
     hightJohn : 1.42 ,
     weightJohn : 45,
@@ -129,4 +133,4 @@ if (BMI.BIMJohn() > BMI.BIMMark()) {
     console.log('each equal,  BMI = ' + BMI.BIMJohn());
 }
     
-
+*/

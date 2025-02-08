@@ -1,35 +1,28 @@
-// Object properties
-var myObject = {
-    firstName : 'Jane',
-    lastName : 'Green',
-    age : 28,
-    job : 'manager',
-    fullName : function(){
-       return (this.firstName+ '  ' +this.lastName).toUpperCase();
-    },
-    favoriteFruits : ['banana','apple','avocado'],
-    janeSis : {
-        firstName : 'alisha',
-        lastName : 'goldman',
-        age : 21
-    }
-    
+ //loops and iteration
+
+for( let i = 0; i < 10; i++){
+
+     console.log(i);
 }
-console.log(myObject.janeSis.firstName);
-//alert(myObject.firstName + '  ' + myObject.age + ' ' + myObject.fullName());
-console.log(myObject.fullName());
-myObject.lastName = 'smith';
-myObject['job'] = 'driver';
-console.log(myObject);
+// var x = 0;   
+// while (x < person.length){
+//      console.log(x);
+//      x++
+//  }
 
-var x = 'lastName';
-console.log(myObject[x]);
-
-
-var F = new Object();
-F.color = 'red';
-F.food = 'pasta';
-F['movie'] = 'silent of the lambs';
-console.log(F);
-delete F.color;
-//alert(F.color + ' That color is red')
+var person = [
+ 'jane','smith', 28 , 'manager'
+];
+for (var i = 0; i < person.length; i++) {
+    if (typeof person[i] !== 'string')continue ;
+        
+        console.log(person[i]);
+}
+for (var i = 0; i < person.length; i++) {
+    if (typeof person[i] !== 'string')break ;
+        
+        console.log(person[i]);
+}
+for(var i = person.length -1; i >= 0; i--){
+    console.log(person[i]);
+   }
