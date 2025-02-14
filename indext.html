@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="o">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <p id="Doc.window"></p>
     <h1>
         test Js
     </h1>
 
-    <p id="demo"></p>
-    <button onclick="myFunction()">try it</button>
-    <br> 
-    <br>
-    <button onclick="temperature(x)">Temp</button>
-
-    <form id="selectTemp">
-        <label for="choose">Select temperature</label> <br>
-        <input type="submit" onclick="temperature(x)" value="Less than zero degrees">
-        <input type="submit" onclick="temperature(x)" value="Between 0 and 15 degrees">
-        <input type="submit" onclick="temperature(x)" value="More than 15 degrees">
-    </form>
-    <div id="result"></div>
-
-    <!-- <p id="cemo"></p>
-     -->
     
+    <div onclick="myFunction()">
+        <p id="demo"></p>
+        <div><input type="text"></div>
+        <div><button>click me</button></div>
+        <div><p>Description
+
+            The activeElement property returns the HTML element that have focus.
+            
+            The activeElement property is read-only.
+            </p></div>
+    </div>
 </body>    
 <script src="indext.js"></script>
 <script src="doc.js"></script>

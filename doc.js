@@ -202,3 +202,5 @@ if(avgM > avgJ){
 }else{
     console.log("John spent more.");
 }
+
+console.log(this);
