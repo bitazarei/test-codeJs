@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id="myDiv"
+    style="padding:20px;background-color:yellow;"
+    onmouseover = "this.innerHTML += '*'">
+        *
+    </div>
+
+    <p><button onclick="myFunction(event)">
+        submit mouse over
+    </button></p>
+
     <ul id="myList">
         <li>peach</li>
         <li>watermelon</li>
     </ul>
-    <h1>The Document Object</h1>
-    <h2>The createAttribute() and setAttributeNode() Methods</h2>
     
-    <a id="myAnchor">Go to W3schools.com</a>
-    
-    <p>Click "Add" to add a href attribute to the anchor above.</p>
-    
-    <button onclick="myFunction()">Add</button>
-    
+    <button id="triggerButton">Trigger Click</button>
+    <button id="targetButton">Click Me</button>
+
     <p id="demo"></p>
     <p id="wF"></p>
 <script src="indext.js"></script>
