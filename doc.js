@@ -22,3 +22,14 @@ console.log(QS);
 // querySelectorAll
 var QSA = document.querySelectorAll('.p1')
 console.log(QSA);
+
+var showL = document.querySelector('.myList')
+console.log(
+    typeof showL ,
+    showL.parentNode.nodeName , 
+    showL.firstElementChild ,
+    showL.lastElementChild ,
+    showL.childElementCount
+    );
+
+console.log(showL.innerHTML);
