@@ -7,4 +7,15 @@
  body{
     background-color: rgb(211, 228, 243);
 } 
-/* borre */
+.changedDemo {
+    height: 100px;
+    width: 160px;
+    background-color: rgb(79, 40, 221);
+    text-align: center;
+    }
+
+.org {
+    height: 100px;
+    width: 160px;
+    background-color: rgb(40, 221, 40);
+    }

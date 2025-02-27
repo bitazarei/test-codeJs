@@ -33,3 +33,35 @@ console.log(
     );
 
 console.log(showL.innerHTML);
+
+
+// change innerHTML
+
+  function changeT() {
+    document.getElementById('demo').className = 'changedDemo';
+}
+
+// attribute add , remove , call 
+
+  // call
+var callP = document.getElementById('myp1');
+console.log(callP.id);
+
+var callP2 = document.getElementById('myp1');
+console.log(callP2.className);
+
+var callP2 = document.getElementById('myp1');
+console.log(callP2.title);
+
+  // getAttribute | call another
+var callAnother = document.getElementById('myp1');
+console.log(callAnother.getAttribute('id'));
+
+  // setAttribute | add
+var add = document.getElementById('myp1');
+//console.log(add.setAttribute('class','show')); //correct
+add.className = 'myClass';    //correct
+
+  // removeAttribute | remove
+var remove = document.getElementById('myp1');
+console.log(remove.removeAttribute('title'));
