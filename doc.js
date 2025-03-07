@@ -1,7 +1,7 @@
 var doc = document;
 console.log(doc);
 
-// getElementByTd
+// getElementById
 var element = document.getElementById('myList');
 console.log(element);
 console.log(typeof element);
@@ -34,13 +34,6 @@ console.log(
 
 console.log(showL.innerHTML);
 
-
-// change innerHTML
-
-  function changeT() {
-    document.getElementById('demo').className = 'changedDemo';
-}
-
 // attribute add , remove , call 
 
   // call
@@ -65,3 +58,29 @@ add.className = 'myClass';    //correct
   // removeAttribute | remove
 var remove = document.getElementById('myp1');
 console.log(remove.removeAttribute('title'));
+
+
+// Floor method
+console.log(Math.floor(1.2));
+console.log(Math.floor(-3.2));
+
+// Random method
+//var RM = Math.random()*11
+//console.log(RM);
+
+// Bach tick
+var firstName = 'Bita';
+console.log(`my name is ${firstName}`);
+
+// Random Color
+function randNum(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randColor() {
+  return `rgb(${randNum(20 , 120)}, ${randNum(20 , 130)} , ${randNum(20 , 130)})`;
+}
+
+function changeColor() {
+document.getElementById("demo").style.backgroundColor = randColor();
+}

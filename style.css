@@ -4,9 +4,9 @@
     box-sizing: border-box;
     /* text-align: center; */
 }
- body{
+body{
     background-color: rgb(211, 228, 243);
-} 
+}  
 .changedDemo {
     height: 100px;
     width: 160px;
@@ -14,8 +14,9 @@
     text-align: center;
     }
 
-.org {
+ .org {
+    border: 1px solid;
     height: 100px;
     width: 160px;
-    background-color: rgb(40, 221, 40);
-    }
+    /* background-color: rgb(40, 221, 40); */
+    } 
