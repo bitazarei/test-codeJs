@@ -50,10 +50,10 @@ function checkPoints() {
   else if (TotalSum >= 50){
     document.getElementById('textW').innerHTML = 'Player 2 won';
     document.getElementById('gameOver').innerHTML = 'Game over';
+    document.getElementById('gemeAgane').innerHTML = 'Game agane ?';
+    var on = document.getElementById('gemeAgane');
+    on.onclick = function onC() {
+      location.reload();
+    }
   }
 }
-// function gameA() {
-//             document.getElementById('gemeAgane').innerHTML = location.reload();
-
-//      }
-// document.getElementById('textW').style = '.textWinner';
