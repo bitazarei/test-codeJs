@@ -79,3 +79,73 @@ reset.addEventListener('click', function () {
     currentNum.innerHTML = 0
     document.getElementById('zero').style.color = 'white'
 })
+
+    //mini peroject 2
+/*
+   const element1 = document.getElementById('book');
+   var x = element1.scrollHeight;
+   var y = element1.scrollWidth;
+
+   const element2 = document.getElementById('article');
+   var x = element2.scrollHeight;
+   var y = element2.scrollWidth;
+
+   const element3 = document.getElementById('scince');
+   var x = element3.scrollHeight;
+   var y = element3.scrollWidth;* */
+
+   const book = document.getElementById('book');
+   const article = document.getElementById('article');
+   const scince = document.getElementById('scince');
+
+   const clickScroll1 = document.getElementById('ScrollH1');
+   const clickScroll2 = document.getElementById('ScrollH2');
+   const clickScroll3 = document.getElementById('ScrollH3');
+
+   
+
+   clickScroll1.addEventListener('click', function () {
+    clickScroll1.classList.toggle("action");
+    if (book.style.maxHeight) {
+      //  book.style.display = "block";book.style.display === 'none'
+      book.style.maxHeight = null
+        
+    }else{
+       // book.style.display = "none";
+        book.style.maxHeight = book.scrollHeight + 'px'
+    }
+   })
+
+   clickScroll1.addEventListener('click', function () {
+    if (bi.style.display === 'none') {
+        bi.style.display = 'block';
+        this.classList.add('ci')
+    } else {
+        bi.style.display = 'none';
+    }
+   })
+  /* bi.addEventListener('click', function () {
+    if (book.style.display === 'none') {
+        book.style.display = "block";
+        this.classList.add('bi');
+    }else{
+        book.style.display = "none";
+        this.classList.add('bi');
+    }    
+    })* */
+
+   clickScroll2.addEventListener('click', function () {
+    if (article.style.display === 'none') {
+        article.style.display = "block";
+    }else{
+        article.style.display = "none";
+    }
+   })
+
+   clickScroll3.addEventListener('click', function () {
+    if (scince.style.display === 'none') {
+        scince.style.display = "block";
+    }else{
+        scince.style.display = "none";
+    }
+   })
