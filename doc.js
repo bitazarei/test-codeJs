@@ -57,3 +57,65 @@ function checkPoints() {
     }
   }
 }
+//////////////////////////
+//////////////////////////////
+
+// Rock Paper Scissors Game
+
+
+var words = [ 'rock' , 'paper' , 'scissors'];
+function randomWord(arr) {
+  var random = Math.floor(Math.random() * arr.length);
+  return random
+}
+console.log(randomWord(words));
+ 
+const R = document.querySelector('.Rock');
+const P = document.querySelector('.Paper');
+const S = document.querySelector('.Scissors');
+//const status =document.querySelector('.status')
+
+R.addEventListener('click' , function () {
+  R.classList.toggle("active");
+  const func = randomWord(words);
+  if (func === 0) {
+    document.querySelector('.status').innerHTML = 'equal';
+    document.querySelector('.computerSta').innerHTML = 'Rock';
+  }else if ( func === 1) {
+    document.querySelector('.status').innerHTML = 'you losing';
+    document.querySelector('.computerSta').innerHTML = 'paper'
+  }else{
+    document.querySelector('.status').innerHTML = 'you won !';
+    document.querySelector('.computerSta').innerHTML = 'scissors';
+  }
+})
+
+P.addEventListener('click' , function () {
+  P.classList.toggle("active");
+  const func = randomWord(words);
+  if (func === 0) {
+    document.querySelector('.status').innerHTML = 'you won !';
+    document.querySelector('.computerSta').innerHTML = 'Rock';
+  }else if ( func === 1) {
+    document.querySelector('.status').innerHTML = 'equal';
+    document.querySelector('.computerSta').innerHTML = 'paper'
+  }else{
+    document.querySelector('.status').innerHTML = 'you losing';
+    document.querySelector('.computerSta').innerHTML = 'scissors';
+  }
+})
+
+S.addEventListener('click' , function () {
+  S.classList.toggle("active");
+  const func = randomWord(words);
+  if (func === 0) {
+    document.querySelector('.status').innerHTML = 'you losing';
+    document.querySelector('.computerSta').innerHTML = 'Rock';
+  }else if ( func === 1) {
+    document.querySelector('.status').innerHTML = 'you won !';
+    document.querySelector('.computerSta').innerHTML = 'paper'
+  }else{
+    document.querySelector('.status').innerHTML = 'equal';
+    document.querySelector('.computerSta').innerHTML = 'scissors';
+  }
+})
