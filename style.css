@@ -196,13 +196,6 @@ body{
     from {transform: rotate(180deg);}
     to {transform: rotate(0deg);}
   }  
-
-  .container{
-    border: 2px solid;
-    display: flex;
-    flex-direction: row;
-
-  }
   .human button{
     width: 75px;
     height: 24px;
@@ -230,4 +223,4 @@ body{
     border: 1px solid ;
     background-color: rgba(4, 0, 255, 0.445);
     
-  }
+  } 

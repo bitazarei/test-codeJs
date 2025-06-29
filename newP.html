@@ -4,36 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    
-    <div class="container">
-        <h1>ROCK , PAPER , SCISSORS Game</h1> 
-        <div>
-             <div id="human" class="human">
-            <p>Choose one:</p>
-            <button class="Rock">
-                Rock  
-            </button>
-            <button class="Paper">
-                Paper
-            </button>
-            <button class="Scissors">
-                Scissors
-            </button>
-            </div>
-            <div>
-            <div id="computer" class="computer">
-                <h2>computer</h2>    
-                <p class="computerSta"></p>
-            </div>
-        </div>
-
-        
-    </div>
-          <p class="status"></p>
+   <style>
+    .container{
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0px;
+  } 
+  .menu::before{
+    content: '\002630';
+   
+  }
   
+  .sideBar{
+    width: 200px;
+    height: 600px;
+    background-color: rgb(212, 212, 212);
+    border : 2px solid;
+     content : '\0000D7';
+   } 
+   .sideBar::after{
+    content : '\0000D7';
+    font-size: 50px;
+    
+   }
+   .S3d{
+    content : '\0000D7';
+    font-size: 50px;
+    display: none;
+   }
+ /* .sideBar .active{
+    content : '\0000D7';
+    display:none;
+   }  */
+   </style> 
+  <div class="container">
+    <div id="menu" class="menu">
+       open
+        <!-- <p>open</p> -->
+    </div>
+    <div id="SB">
+        <div></div>
+        <!-- <div class="sideBar">fff</div> -->
+    </div>
+  </div>
+
 </body>
 <script src="doc.js"></script>
 </html>
