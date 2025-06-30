@@ -7,53 +7,57 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-   <style>
-    .container{
-    /* border: 2px solid; */
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: flex-start;
-    padding: 0px;
-    margin: 0px;
-  } 
-  .menu::before{
-    content: '\002630';
-   
-  }
-  
-  .sideBar{
-    width: 200px;
-    height: 600px;
-    background-color: rgb(212, 212, 212);
-    border : 2px solid;
-     content : '\0000D7';
-   } 
-   .sideBar::after{
-    content : '\0000D7';
-    font-size: 50px;
-    
-   }
-   .S3d{
-    content : '\0000D7';
-    font-size: 50px;
-    display: none;
-   }
- /* .sideBar .active{
-    content : '\0000D7';
-    display:none;
-   }  */
-   </style> 
-  <div class="container">
-    <div id="menu" class="menu">
-       open
-        <!-- <p>open</p> -->
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .container{
+            width: 240px;
+            height: 240px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            margin-right: 50px;
+        }
+        .child{
+            width: 40px;
+            height: 40px;
+            border: 2px solid blue;
+            color: s;
+        }
+        .con2{
+            width: 240px;
+            height: 240px;
+            border: 2px solid teal;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+          
+            
+        }
+        .child2{
+            width: 40px;
+            height: 40px;
+            border: 2px solid plum;
+            margin: 29px;
+        }
+        .eatherChild{
+            width: 40px;
+            height: 40px;
+            border: 2px solid plum;
+        }
+    </style>
+    <div class="container">
+        <div class="child"></div>
     </div>
-    <div id="SB">
-        <div></div>
-        <!-- <div class="sideBar">fff</div> -->
+    <div class="con2">
+        <div class="child2"></div>
+        <div class="eatherChild"></div>
     </div>
-  </div>
 
 </body>
 <script src="doc.js"></script>
