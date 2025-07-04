@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Div Values to Array</title>
+    <style>
+        .box {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+<p id="p"></p>
+<p id="p1"></p>
+<div class="box">Value 1</div>
+<div class="box">Value 2</div>
+<div class="box">Value 3</div>
+<div class="box">Value 4</div>
+
+<button id="convertButton">Convert to Array</button>
+
+<script>
+    // document.getElementById('convertButton').onclick = function() {
+    //     // Select all div elements with the class 'box'
+    //     const divs = document.querySelectorAll('.box');
+        
+    //     // Convert NodeList to Array and extract text content
+    //     const valuesArray = Array.from(divs, div => div.textContent.trim());
+        
+    //     // Log the resulting array to the console
+    //     console.log(valuesArray);
+    // };
+
+
+    // js array methods and property
+    const newArray0 = [];
+    newArray0.push = ('bita');
+    newArray0.push = ('zahra');
+    console.log(newArray0); // or
+
+    const newArray1 = new Array();
+    newArray1.push = ("bmw");
+    newArray1.push = ("nnc");
+    console.log(newArray1); // or
+
+    const newArray2 = new Array(['bmw','pried','samand']);
+    console.log(newArray2);
+
+    // at() or x.[] in array
+    const fruits0 = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit0 = fruits0[2];
+
+    const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit1 = fruits1.at(-1);
+
+    console.log(fruit0 , fruit1);
+
+    // concat in array
+    const name = ['nahal','maral'];
+    const family = ['hemat','jokar'];
+    const job = ['teacher','chef'];
+    const fColor = ['red', 'blue']
+    let conction = name.concat(family,job,fColor);
+    console.log(conction);
+
+    const arr0 = [1,[2,3]];
+    const arr1 = [4,[5,6]];
+    let arr3 = arr0.concat(arr1);
+    console.log(arr3);
+
+
+    // copyWithin() in array
+    const cW = ['a','b','c','d','e','f'];
+    let show = cW.copyWithin(0,1,2,3);
+    console.log(show);
+
+    console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
+    console.log([1, 2, 3, 4, 5].copyWithin(-1, -3, -4));
+    console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
+
+    //constructor in array
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let text = fruits.constructor;
+    console.log(text);
+
+   //entries
+    const entries1 = ['A','B','C','D'];
+        const list = entries1.entries();
+        // console.log(entries1.entries());
+     
+    let tex1t = " ";
+    for(let x of list){
+        tex1t += x + '</br>';
+    };
+    console.log(list);
+    document.getElementById('p').innerHTML = tex1t;
+
+    //every()
+    const ages = [123, 118, 21, 31];
+
+    function checkAge(age) {
+        return age > 18;
+    }
+   document.getElementById('p1').innerHTML ='are all ages over 18 ?' + ages.every(checkAge);
+
+
+
+    const lists = [
+        {name : 'Ana' , answer : 'yes'},
+        {name : 'jack' , answer : 'yes'},
+        {name : 'sara' , answer : 'yes'},
+        {name : 'peter' , answer : 'yes'}
+    ]
+
+    function sameAnswer(el ,index ,arr) {
+        if (index === 0) {
+            return true;
+        } else {
+            return(el.answer === arr[index - 1].answer);
+        }   
+    }
+    console.log(lists.every(sameAnswer));
+
+    const books = [
+        {name : 'english 1' , status : 'read'},
+        {name : 'english 2' , status : 'read'},
+        {name : 'english 3' , status : 'read'},
+        {name : 'english 4' , status : 'read'},
+        {name : 'english 5' , status : 'read'},
+    ]
+
+    function booksStatus(elements, index, arr){
+        if (index === 0) {
+            return true
+        } else {
+            return(elements.status === arr[index - 1].status)
+        }
+    }
+    console.log(books.every(booksStatus));
+
+    const v = [
+        {name : 'english 1' , status : 'read', like : 'yes'},
+        {name : 'english 2' , status : 'read', like : 'yes'},
+        {name : 'english 3' , status : 'read', like : 'yes'},
+        {name : 'english 4' , status : 'read', like : 'yes'},
+        {name : 'english 5' , status : 'read', like : 'yes'},
+    ]
+
+    function booksStatusPro(elements, index0, arr){
+        if (index0 === 0 ) {
+            return true;
+        }
+        else{
+            return(elements.like === arr[index0 - 1].like);
+            return(elements.status === arr[index0 - 1].status);
+        }
+    }
+    console.log(v.every(booksStatusPro));
+
+
+    // fill
+
+    const color = ['red','blue','yellow','orange','paper'];
+    console.log(color.fill('brown'));
+
+    const color1 = ['red','blue','yellow','orange','paper'];
+    console.log(color1.fill('brown',1,4));
+    </script>
+
+</body>
+</html>
