@@ -1,58 +1,56 @@
-// input.addEventListener('keyup', ()=>{
-//   p.innerHTML += `</br> keyup` ;
-// })
-// input.addEventListener('keypress', ()=>{
-//   p.innerHTML += `</br> keypress` ;
-// })
+const creatList = document.querySelector('.withJs');
 
-// lable.addEventListener('tabindex', ()=>{
-//   lable.innerHTML += `</br> keydown` ;
-// })
-/*const input = document.querySelector('input');
-const p = document.querySelector('p');
-const lable = document.querySelector('lable');
+const arr = [
+  {1 : 'Math Remedial Class'},
+  {2 : 'Science Lab Projects'},
+  {3 : 'Participation in Music Group'}
+]
 
- input.addEventListener('keypress', ()=>{
-  let value = input.value;
-  // Check if the last character is a number
-  if (/\d$/.test(value)) {
-      // Append an underscore
-      input.value =  value + '_';
-  }else if (/[a-zA-Z]$/.test(value)) {
-    p.innerHTML += `</br> please just enter numbe`;
-    input.value = value.slice(0,-1); //Remove the last character
-  }
-})* */
-
-
-//const Qlist = document.querySelector('.qList');
-
-document.body.onload = expend;
-
-function expend() {
-  const add = document.querySelector('.add');
-
-  const newDiv = document.createElement("div");
-  newDiv.className = 'box';
-  const p = document.createTextNode('this is a p');
-  newDiv.appendChild(p);
-
+function myFunction(item) {
   
-  add.replaceWith(newDiv);
-  //add.appendChild(newDiv) //for create new childe
-  //document.body.insertBefore(newDiv , add.parentNode); //for create add child
-}
-function cInputs() {
-  
-  const input = document.createElement('input');
-  const divs = document.querySelector('.qList');
+  for(let key in item){
+    const paragraph = document.createElement('p');
+    paragraph.textContent = ` ${key} : ${item[key]}`;
+    creatList.appendChild(paragraph);
+    paragraph.className = 'item';
 
-  const valueArray = Array.from(divs).map ( div => div.innerText);
+    const creatInput0 = document.createElement('input');
+    creatInput0.type = 'checkbox';
 
-  console.log(valueArray);
+    const cLable = document.createElement('label');
+    cLable.textContent = 'Accept';
+    creatList.appendChild(creatInput0);
+    creatList.appendChild(cLable);
+    creatInput0.className = 'item';
+    
+    const creatInput1 = document.createElement('input');
+    creatInput1.type = 'checkbox';
+    creatList.appendChild(creatInput1);
+    creatInput1.className = 'item';
+    const cLable1 = document.createElement('label');
+    cLable1.textContent = 'delete';
+    creatList.appendChild(creatInput0);
+    creatList.appendChild(cLable1);
 
-   for (let i = 0; i < Qlist.length; i++) {
-    const element = Qlist[i];
-    input.append();
-   }
-}
+   const cLable2 = document.createElement('label');
+    cLable2.textContent = 'comment :';
+    creatList.appendChild(creatInput0);
+    creatList.appendChild(cLable2);
+
+    const creatInput = document.createElement('input');
+    creatInput.type = 'text';
+    creatList.appendChild(creatInput);
+    creatInput.className = 'item';
+
+    creatInput0.addEventListener('click', () => {
+      creatInput1.checked = false;
+      paragraph.innerHTML = paragraph.textContent;
+  });
+
+  creatInput1.addEventListener('click', () => {
+    creatInput0.checked = false;
+    paragraph.innerHTML = `<s>${paragraph.textContent}</s>`;
+  });
+  }}
+  myFunction.className = 'con1';
+arr.forEach(myFunction);

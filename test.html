@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="n">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +17,11 @@
 <p id="p"></p>
 <p id="p1"></p>
 <div class="box">Value 1</div>
-<div class="box">Value 2</div>
+<input type="text" id="input" value="20">
+<p id="pforInp"></p>
+<!-- <div class="box">Value 2</div>
 <div class="box">Value 3</div>
-<div class="box">Value 4</div>
+<div class="box">Value 4</div> -->
 
 <button id="convertButton">Convert to Array</button>
 
@@ -35,141 +37,93 @@
     //     console.log(valuesArray);
     // };
 
-
-    // js array methods and property
-    const newArray0 = [];
-    newArray0.push = ('bita');
-    newArray0.push = ('zahra');
-    console.log(newArray0); // or
-
-    const newArray1 = new Array();
-    newArray1.push = ("bmw");
-    newArray1.push = ("nnc");
-    console.log(newArray1); // or
-
-    const newArray2 = new Array(['bmw','pried','samand']);
-    console.log(newArray2);
-
-    // at() or x.[] in array
-    const fruits0 = ["Banana", "Orange", "Apple", "Mango"];
-    let fruit0 = fruits0[2];
-
-    const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-    let fruit1 = fruits1.at(-1);
-
-    console.log(fruit0 , fruit1);
-
-    // concat in array
-    const name = ['nahal','maral'];
-    const family = ['hemat','jokar'];
-    const job = ['teacher','chef'];
-    const fColor = ['red', 'blue']
-    let conction = name.concat(family,job,fColor);
-    console.log(conction);
-
-    const arr0 = [1,[2,3]];
-    const arr1 = [4,[5,6]];
-    let arr3 = arr0.concat(arr1);
-    console.log(arr3);
-
-
-    // copyWithin() in array
-    const cW = ['a','b','c','d','e','f'];
-    let show = cW.copyWithin(0,1,2,3);
-    console.log(show);
-
-    console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
-    console.log([1, 2, 3, 4, 5].copyWithin(-1, -3, -4));
-    console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
-
-    //constructor in array
-    const fruits = ["Banana", "Orange", "Apple", "Mango"];
-    let text = fruits.constructor;
-    console.log(text);
-
-   //entries
-    const entries1 = ['A','B','C','D'];
-        const list = entries1.entries();
-        // console.log(entries1.entries());
-     
-    let tex1t = " ";
-    for(let x of list){
-        tex1t += x + '</br>';
-    };
-    console.log(list);
-    document.getElementById('p').innerHTML = tex1t;
-
-    //every()
-    const ages = [123, 118, 21, 31];
-
+//filter
+    const ages = [13 ,24 ,18 ,30]
     function checkAge(age) {
-        return age > 18;
+        return age >= 18
     }
-   document.getElementById('p1').innerHTML ='are all ages over 18 ?' + ages.every(checkAge);
+    console.log(ages.filter(checkAge));
 
+ const number = [28,29,12,20]
+ function name(num) {
+    return num >= 20
+ }
+ var cb = document.getElementById('convertButton');
 
+ cb.addEventListener('click', function() {
+    document.getElementById('pforInp').innerHTML = number.filter(name);
+ })
 
-    const lists = [
-        {name : 'Ana' , answer : 'yes'},
-        {name : 'jack' , answer : 'yes'},
-        {name : 'sara' , answer : 'yes'},
-        {name : 'peter' , answer : 'yes'}
-    ]
+// find
 
-    function sameAnswer(el ,index ,arr) {
-        if (index === 0) {
-            return true;
-        } else {
-            return(el.answer === arr[index - 1].answer);
-        }   
-    }
-    console.log(lists.every(sameAnswer));
+var odd = [1,3,5,7,9,11,13,15];
 
-    const books = [
-        {name : 'english 1' , status : 'read'},
-        {name : 'english 2' , status : 'read'},
-        {name : 'english 3' , status : 'read'},
-        {name : 'english 4' , status : 'read'},
-        {name : 'english 5' , status : 'read'},
-    ]
+function findover5(oddd) {
+   return oddd > 5
+}
+console.log(odd.find(findover5));
 
-    function booksStatus(elements, index, arr){
-        if (index === 0) {
-            return true
-        } else {
-            return(elements.status === arr[index - 1].status)
-        }
-    }
-    console.log(books.every(booksStatus));
+const survey = [
+  { name: "Steve", answer: "Yes" },
+  { name: "Jessica", answer: "Yes" },
+  { name: "Peter", answer: "No" },
+  { name: "Elaine", answer: "No" }
+];
+function  vv(element , index , array) {
+  return  element.answer === 'No'}
 
-    const v = [
-        {name : 'english 1' , status : 'read', like : 'yes'},
-        {name : 'english 2' , status : 'read', like : 'yes'},
-        {name : 'english 3' , status : 'read', like : 'yes'},
-        {name : 'english 4' , status : 'read', like : 'yes'},
-        {name : 'english 5' , status : 'read', like : 'yes'},
-    ]
+console.log(survey.find(vv));
 
-    function booksStatusPro(elements, index0, arr){
-        if (index0 === 0 ) {
-            return true;
-        }
-        else{
-            return(elements.like === arr[index0 - 1].like);
-            return(elements.status === arr[index0 - 1].status);
-        }
-    }
-    console.log(v.every(booksStatusPro));
+// findIndex
 
+const num = [12, 23, 34, 45];
+function findTheIndex(number) {
+    return number > 12
+}
+console.log(num.findIndex(findTheIndex)); // find index
+console.log(num.findLast(findTheIndex)); // finde last
+console.log(num.findLastIndex(findTheIndex)); // finde last index
 
-    // fill
+// flat
+const arr0 = [1, 2, [3, [4, 5, 6], 7], 8];
+console.log(arr0.flat(4));
+// flat map
+const arr1 = [0,1,2,3,4,5,6,7];
+console.log(arr1.flatMap(flatmapx));
 
-    const color = ['red','blue','yellow','orange','paper'];
-    console.log(color.fill('brown'));
+function flatmapx(x) {
+ // return  x >= 3 ;
+ return x * 10;
+}
+const arr3 = [0,1,2,3,4];
+console.log(arr3.flatMap(x => [x * x]));
+// forEach
 
-    const color1 = ['red','blue','yellow','orange','paper'];
-    console.log(color1.fill('brown',1,4));
-    </script>
+let sum = 0 ;
+const numbers = [12 ,13 ,14 ,15 ,16 ,17];
+
+function sums(item) {
+   //return v += (2 * y);
+    return item * 10
+   //return sum += item * 10;
+}
+numbers.forEach(item =>{
+    sum += sums(item)
+})
+//console.log(numbers.forEach(sums));
+console.log(sum);
+
+// from
+
+const arr2 = [0,1,2,3,4,5];
+
+function myFunction(n) {
+    return n * 2;
+}
+const myFrom = Array.from(arr2, myFunction);
+console.log(myFrom);
+
+</script>
 
 </body>
 </html>
