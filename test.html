@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="n">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>obg</title>
 </head>
 <body>
-   
+   <style>
+    body{
+       /* display: flex;*/
+        padding: 20px;
+        margin: 20px;
+    }
+    div{
+        border : 2px solid red;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+    }
+    .new{
+        background-color: blueviolet;
+    }
+    .after{
+        display: block;
+    }
+   </style>
+    <input class="b" id="b" type="text">
+    <div class="pedareto one">1</div>
+    <div class="pedareto two">2</div>
+    <div class="pedareto three">3</div>
+    <div class="pedareto four"></div>
+    <div class="pedareto five"></div>
+    <div class="pedareto six"></div>
+
+    <p class="xx"></p>
+    <script>
+    
+        const input = document.getElementById('b');
+        const div0 = document.querySelectorAll('.pedareto');
+        
+        const box1 = document.querySelector('.one');
+        const box2 = document.querySelector('.two');
+        const box3 = document.querySelector('.three');
+        const box4 = document.querySelector('.four');
+        const box5 = document.querySelector('.five');
+        const box6 = document.querySelector('.six');
+
+      /*  input.addEventListener('keydown', () => {
+            div0.forEach(pedareto => {
+                pedareto.style.backgroundColor = 'red';
+            });
+        });
+
+       */ 
+     // const num = ['1', '2', '3', '4', '5', '6'];
+        input.addEventListener('keydown', (x) => {
+           let key = x.key;
+                    switch (key) {
+                    case '1':
+                       box1.classList.add('new'); 
+                        break;
+                        case '2':
+                       box2.classList.add('new'); 
+                        break;
+                        case '3':
+                       box3.classList.add('new'); 
+                        break;
+                        case '4':
+                       box4.classList.add('new'); 
+                        break;
+                        case '5':
+                       box5.classList.add('new'); 
+                        break;
+                        case '6':
+                       box6.classList.add('new'); 
+                        break;
+                    default:
+                        break;
+                }
+        })
+        
+       input.addEventListener('keyup', (y) => {
+            /*div0.forEach(pedareto => {
+                pedareto.style.backgroundColor = 'black';
+            })*/
+          let key = y.key
+            switch (key) {
+                case '1':
+                    box1.classList.replace('new','after');
+                    break;
+                    case '2':
+                       box2.classList.replace('new','after'); 
+                        break;
+                        case '3':
+                       box3.classList.replace('new','after'); 
+                        break;
+                        case '4':
+                       box4.classList.replace('new','after'); 
+                        break;
+                        case '5':
+                       box5.classList.replace('new','after'); 
+                        break;
+                        case '6':
+                       box6.classList.replace('new','after'); 
+                        break;
+                default:
+                    break;
+            }
+        })
+
+
+    </script>
 </body>
 </html>

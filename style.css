@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   /* background-color: rgb(75, 74, 74);*/
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.myInput{
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid ;
+}
+.container{
+    border: 1px solid;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    margin: 12px;
+    background-color: lightgray;
+}
+.container div{
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 1px;
+    margin: 12px;
+}
+
+.pp{
+    padding: 4px;
+    margin: 5px;
+    font-size: 23px;
+    box-shadow: 3px 3px 13px 1px rgb(121, 114, 114);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.action{
+    padding: 4px;
+    margin: 5px;
+    font-size: 23px;
+    box-shadow: 3px 3px 13px 1px darkgray;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+.pass{
+    display: block;
+    padding: 4px;
+    margin: 5px;
+    font-size: 23px;
+    box-shadow: 3px 3px 13px 1px darkgray;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*.action::after{
+    padding: 4px;
+    margin: 19px;
+    font-size: 23px;
+    box-shadow: 3px 3px 13px 1px darkgray;
+    border-radius: 20px;
+    width: 75px;
+    height: 75px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: black;
+}*/
