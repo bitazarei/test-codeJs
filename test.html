@@ -14,8 +14,8 @@
     }
     div{
         border : 2px solid red;
-        width: 40px;
-        height: 40px;
+        width: 300px;
+        height: 59px;
         margin: 20px;
     }
     .new{
@@ -24,19 +24,54 @@
     .after{
         display: block;
     }
+    .container{
+        width: 300px;
+        height: 300px;
+        border: 2px solid green; 
+        justify-content: center;
+    }
+    .child{
+        width: 200px;
+        height: 200px;
+        border: 2px solid purple;
+    }
+    button{
+        width: 100px;
+        height: 30px;
+    }
    </style>
-    <input class="b" id="b" type="text">
-    <div class="pedareto one">1</div>
-    <div class="pedareto two">2</div>
-    <div class="pedareto three">3</div>
-    <div class="pedareto four"></div>
-    <div class="pedareto five"></div>
-    <div class="pedareto six"></div>
 
-    <p class="xx"></p>
+<div>
+   <button class="btn">click me</button>
+    <div class="pp"></div>
+</div>
+
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="container">
+        <div class="child"></div>
+    </div>
+    <a href="https://www.w3schools.com/" class="link">w3schools</a>
     <script>
-    
-        const input = document.getElementById('b');
+        const button = document.querySelector('.btn');
+        const pA = document.querySelector('.pp');
+        const link =document.querySelector('.link');
+
+        link.addEventListener('click',(event) => {
+            event.preventDefault();
+        })
+
+        button.addEventListener('click',handler());
+        
+        function handler(event){
+            pA.innerHTML += 'hey you </br>';
+            button.removeEventListener('click' , handler);
+            event.preventDefault()
+        }
+        
         const div0 = document.querySelectorAll('.pedareto');
         
         const box1 = document.querySelector('.one');
@@ -44,72 +79,60 @@
         const box3 = document.querySelector('.three');
         const box4 = document.querySelector('.four');
         const box5 = document.querySelector('.five');
-        const box6 = document.querySelector('.six');
 
-      /*  input.addEventListener('keydown', () => {
-            div0.forEach(pedareto => {
-                pedareto.style.backgroundColor = 'red';
-            });
-        });
 
-       */ 
-     // const num = ['1', '2', '3', '4', '5', '6'];
-        input.addEventListener('keydown', (x) => {
-           let key = x.key;
-                    switch (key) {
-                    case '1':
-                       box1.classList.add('new'); 
-                        break;
-                        case '2':
-                       box2.classList.add('new'); 
-                        break;
-                        case '3':
-                       box3.classList.add('new'); 
-                        break;
-                        case '4':
-                       box4.classList.add('new'); 
-                        break;
-                        case '5':
-                       box5.classList.add('new'); 
-                        break;
-                        case '6':
-                       box6.classList.add('new'); 
-                        break;
-                    default:
-                        break;
-                }
+        box1.addEventListener('touchstart' , () => {
+            box2.innerHTML = 'touch start';
         })
+        box1.addEventListener('touchend' , () => {
+            box3.innerHTML = 'touch RND';
+        })
+        box1.addEventListener('touchmove' , () => {
+            box4.innerHTML = 'touch MOVE';
+        })
+        box1.addEventListener('touchstart' , (event) => {
+            box4.innerHTML = event.touches.length;
+            box4.innerHTML ='client X' + event.touches[0].clientX +'</br>';
+            box4.innerHTML ='client Y' + event.touches[0].clientY +'</br>';
+            box4.innerHTML ='screen X' + event.touches[0].screenX +'</br>';
+            box4.innerHTML ='screen y' + event.touches[0].screenY +'</br>';
+            box4.innerHTML ='page X' + event.touches[0].pageX +'</br>';
+            box4.innerHTML ='page Y' + event.touches[0].pageY +'</br>';
+        })
+
+        // Event flow
+        const cont = document.querySelector('.container');
+        const child = document.querySelector('.child');
+        child.addEventListener('click', () => {
+            child.innerHTML += '(4) child handler <br>'
+        },true )
+            
+        cont.addEventListener('click', () => {
+            child.innerHTML += '(3) container handler <br>'
+        },true )
+        document.body.addEventListener('click', () => {
+            child.innerHTML += '(2) body handler <br>'
+        },true )
+        document.documentElement.addEventListener('click', () => {
+            child.innerHTML += '(1) html handler <br>';
+            
+        },true )
+
+        child.addEventListener('click', () => {
+            child.innerHTML += '(5) child handler <br>'
+        },)
+        cont.addEventListener('click', (event) => {
+            // STOP  PROPAGATION
+            event.stopPropagation()
+            child.innerHTML += '(6) container handler <br>'
+        },)
+        document.body.addEventListener('click', () => {
+            child.innerHTML += '(7) body handler <br>'
+        },)
+        document.documentElement.addEventListener('click', () => {
+            child.innerHTML += '(8) html handler <br>'
+        },)
         
-       input.addEventListener('keyup', (y) => {
-            /*div0.forEach(pedareto => {
-                pedareto.style.backgroundColor = 'black';
-            })*/
-          let key = y.key
-            switch (key) {
-                case '1':
-                    box1.classList.replace('new','after');
-                    break;
-                    case '2':
-                       box2.classList.replace('new','after'); 
-                        break;
-                        case '3':
-                       box3.classList.replace('new','after'); 
-                        break;
-                        case '4':
-                       box4.classList.replace('new','after'); 
-                        break;
-                        case '5':
-                       box5.classList.replace('new','after'); 
-                        break;
-                        case '6':
-                       box6.classList.replace('new','after'); 
-                        break;
-                default:
-                    break;
-            }
-        })
-
-
     </script>
 </body>
 </html>
